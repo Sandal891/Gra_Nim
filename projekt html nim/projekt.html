@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gra w Stosy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gra w Stosy</h1>
+    <div id="stacks">
+        <div class="stack" id="stack1">
+            <h3>Stos 1</h3>
+            <div class="items" id="items1"></div>
+        </div>
+        <div class="stack" id="stack2">
+            <h3>Stos 2</h3>
+            <div class="items" id="items2"></div>
+        </div>
+        <div class="stack" id="stack3">
+            <h3>Stos 3</h3>
+            <div class="items" id="items3"></div>
+        </div>
+    </div>
+
+    <div id="controls">
+        <p id="turn">Gracz 1, wybierz stos i liczba przedmiotów do usunięcia</p>
+        <label for="stackSelect">Wybierz stos: </label>
+        <select id="stackSelect">
+            <option value="1">Stos 1</option>
+            <option value="2">Stos 2</option>
+            <option value="3">Stos 3</option>
+        </select>
+        <br>
+        <label for="itemCount">Ile przedmiotów chcesz usunąć? </label>
+        <input type="number" id="itemCount" min="1" value="1">
+        <br>
+        <button onclick="makeMove()">Wykonaj ruch</button>
+    </div>
+
+    <div id="message"></div>
+
+    <script src="game.js"></script>
+</body>
+</html>
